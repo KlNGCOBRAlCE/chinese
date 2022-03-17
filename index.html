@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+<script>
+$(document).ready(function(){
+  var arr = ["中国春节","是在阴历","十二月","二十三日。","春节的第一天,", "人们会穿:","上红色的新衣,", "和吃年夜饭。","在中国春节，","人们放鞭炮，","和新年快乐！"];
+  var index = 0;
+  $('#next').click(function(){
+    $('#words').html(arr[index]);
+    index = (index + 1);
+ });
+ 
+  $('#back').click(function(){
+    $('#words').html(arr[index]);
+    index = (index - 1);
+ });
+ 
+});
+</script>
+
+<div id='words'  style="font-size:70px;"></div> <button id='next' style="font-size:70px;">Next</button>
+
+<button id='back' style="font-size:40px;">back</button>
+
+<div id='current'></div>
+
+<p style="font-size:70px;">中国春节是在阴历十二月二十三日。春节的第一天, 人们会穿上红色的新衣, 和吃年夜饭。在中国春节，人们放鞭炮，和新年快乐！
+</p>
+</body>
+</html>
